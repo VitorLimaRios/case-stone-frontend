@@ -1,10 +1,12 @@
 import React from 'react';
+import { GlobalProvider } from './contexts/GlobalContext';
+import Routes from './routes/Routes';
 
 function App() {
   return (
-    <div className="App">
-      Hello
-    </div>
+    <GlobalProvider>
+      <Routes />
+    </GlobalProvider>
   );
 }
 
