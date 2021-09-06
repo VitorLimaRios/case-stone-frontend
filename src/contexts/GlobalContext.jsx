@@ -4,14 +4,20 @@ import PropTypes from 'prop-types';
 export const GlobalContext = createContext();
 
 export function GlobalProvider({ children }) {
-  const [name, setName] = useState('SEM-NOME');
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   const provide = {
     values: {
       name,
+      email,
+      password,
     },
     functions: {
       setName,
+      setEmail,
+      setPassword,
     },
   };
 
