@@ -7,14 +7,14 @@ export default function SimpleCard(props) {
   const {
     type,
     data: {
-      id, name, thumbnail: { path },
+      id, name, title, thumbnail: { path, extension },
     },
   } = props;
 
   const history = useHistory();
 
   const cardStyle = {
-    width: '18rem',
+    width: '15rem',
   };
 
   return (
@@ -24,14 +24,14 @@ export default function SimpleCard(props) {
     >
       <Card.Img
         variant="top"
-        src={path}
+        src={`${path}/portrait_xlarge.${extension}`}
       />
       <Card.Body>
-        <Card.Title>{ name }</Card.Title>
+        <Card.Title>{ name || title }</Card.Title>
         <InputGroup className="mb-3">
           <Button
             variant="primary"
-            onClick={history.push(`/${type}/${id}`)}
+            onClick={() => history.push(`/${type}/${id}`)}
           >
             Know More
           </Button>
@@ -46,8 +46,10 @@ SimpleCard.propTypes = {
   data: PropTypes.shape({
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
     thumbnail: PropTypes.shape({
       path: PropTypes.string.isRequired,
+      extension: PropTypes.string.isRequired,
     }).isRequired,
   }).isRequired,
 };

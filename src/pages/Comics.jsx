@@ -1,11 +1,37 @@
 import React from 'react';
-import { Header } from '../components';
+import { Container, Row } from 'react-bootstrap';
+import { Header, SimpleCard, PaginationOrder } from '../components';
+import useFetchData from '../hooks/useFetchData';
+import { COMIC_URL } from '../constants/MarvelAPI';
 
 export default function Comics() {
+  const {
+    posts,
+    loading,
+    currentPage,
+    postsPerPage,
+    currentPosts,
+    paginate,
+  } = useFetchData(COMIC_URL);
+
   return (
-    <div>
+    <>
       <Header />
-      Hello
-    </div>
+      <Container fluid>
+        <Row className="justify-content-center p-4">
+          { loading ? <h1>Loading...</h1>
+            : currentPosts.map((item) => <SimpleCard key={item.id} type="character" data={item} />) }
+
+        </Row>
+        <Row sm="auto" className="justify-content-center p-4">
+          <PaginationOrder
+            currentPage={currentPage}
+            postsPerPage={postsPerPage}
+            totalPosts={posts.length}
+            paginate={paginate}
+          />
+        </Row>
+      </Container>
+    </>
   );
 }

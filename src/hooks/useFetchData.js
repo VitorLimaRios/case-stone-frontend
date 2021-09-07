@@ -11,7 +11,7 @@ export default function useFetchData(URL) {
     const fetchPosts = async () => {
       setLoading(true);
       const res = await axios.get(URL);
-      setPosts(res.data.results);
+      setPosts(res.data.data.results);
       setLoading(false);
     };
 
