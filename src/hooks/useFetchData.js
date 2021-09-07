@@ -11,7 +11,8 @@ export default function useFetchData(URL) {
     const fetchPosts = async () => {
       setLoading(true);
       const res = await axios.get(URL);
-      setPosts(res.data.data.results);
+      const data = res.data.data.results.filter((item) => item.thumbnail.path !== 'http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available');
+      setPosts(data);
       setLoading(false);
     };
 

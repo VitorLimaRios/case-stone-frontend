@@ -20,7 +20,7 @@ export default function Comics() {
       <Container fluid>
         <Row className="justify-content-center p-4">
           { loading ? <h1>Loading...</h1>
-            : currentPosts.map((item) => <SimpleCard key={item.id} type="character" data={item} />) }
+            : currentPosts.map((item) => <SimpleCard key={item.id} type="comics" data={item} />) }
 
         </Row>
         <Row sm="auto" className="justify-content-center p-4">

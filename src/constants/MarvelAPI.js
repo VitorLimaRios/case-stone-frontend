@@ -7,8 +7,8 @@ const hash = md5(ts + PRIVATE_KEY + PUBLIC_KEY);
 
 const BASE_URL = 'https://gateway.marvel.com:443/v1/public/';
 
-export const CHARACTER_URL = `${BASE_URL}characters?limit=50&ts=${ts}&apikey=${PUBLIC_KEY}&hash=${hash}`;
-export const COMIC_URL = `${BASE_URL}comics?limit=50&ts=${ts}&apikey=${PUBLIC_KEY}&hash=${hash}`;
+export const CHARACTER_URL = `${BASE_URL}characters?limit=100&ts=${ts}&apikey=${PUBLIC_KEY}&hash=${hash}`;
+export const COMIC_URL = `${BASE_URL}comics?limit=100&ts=${ts}&apikey=${PUBLIC_KEY}&hash=${hash}`;
 export function CHARACTER_ID_URL(id) {
   return `${BASE_URL}characters/${id}?ts=${ts}&apikey=${PUBLIC_KEY}&hash=${hash}`;
 }
