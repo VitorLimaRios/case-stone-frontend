@@ -1,7 +1,10 @@
 body {
   background-color: #000000;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%23220000' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%23440000' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%23660000' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%23880000' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%23A00' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
-  background-attachment: fixed;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%23180000' points='800 100 0 200 0 800 1600 800 1600 200'/%3E%3Cpolygon fill='%23310000' points='800 200 0 400 0 800 1600 800 1600 400'/%3E%3Cpolygon fill='%23490000' points='800 300 0 600 0 800 1600 800 1600 600'/%3E%3Cpolygon fill='%23610000' points='1600 800 800 400 0 800'/%3E%3Cpolygon fill='%23790000' points='1280 800 800 500 320 800'/%3E%3Cpolygon fill='%23920000' points='533.3 800 1066.7 800 800 600'/%3E%3Cpolygon fill='%23AA0000' points='684.1 800 914.3 800 800 700'/%3E%3C/g%3E%3C/svg%3E");
   background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
   /* background by SVGBackgrounds.com */
 }
