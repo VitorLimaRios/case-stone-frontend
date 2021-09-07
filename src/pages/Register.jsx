@@ -2,7 +2,7 @@ import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Forms, SubmitButton, RedirectButton } from '../components';
 
-function Register() {
+export default function Register() {
   return (
     <Container>
       <Row className="mt-5 justify-content-center">
@@ -20,5 +20,3 @@ function Register() {
     </Container>
   );
 }
-
-export default Register;

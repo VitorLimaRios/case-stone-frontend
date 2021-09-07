@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import { GlobalContext } from '../contexts/GlobalContext';
 import schema from '../lib/Validator';
 
-function SubmitButton({ text, API_URL, path }) {
+export default function SubmitButton({ text, API_URL, path }) {
   const {
     values: {
       name,
@@ -77,5 +77,3 @@ SubmitButton.propTypes = {
   API_URL: PropTypes.string.isRequired,
   path: PropTypes.string.isRequired,
 };
-
-export default SubmitButton;

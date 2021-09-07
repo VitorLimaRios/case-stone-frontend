@@ -1,7 +1,7 @@
 import React from 'react';
 import { Header } from '../components';
 
-function UserDetails() {
+export default function UserDetails() {
   return (
     <div>
       <Header />
@@ -9,5 +9,3 @@ function UserDetails() {
     </div>
   );
 }
-
-export default UserDetails;

@@ -2,7 +2,7 @@ import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Forms, SubmitButton, RedirectButton } from '../components';
 
-function Login() {
+export default function Login() {
   return (
     <Container>
       <Row className="mt-5 justify-content-center">
@@ -20,5 +20,3 @@ function Login() {
     </Container>
   );
 }
-
-export default Login;

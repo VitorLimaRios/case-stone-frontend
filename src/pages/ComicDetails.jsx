@@ -1,7 +1,7 @@
 import React from 'react';
 import { Header } from '../components';
 
-function ComicDetails() {
+export default function ComicDetails() {
   return (
     <div>
       <Header />
@@ -9,5 +9,3 @@ function ComicDetails() {
     </div>
   );
 }
-
-export default ComicDetails;

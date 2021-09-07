@@ -12,7 +12,7 @@ import {
   UserDetails,
 } from '../pages';
 
-function Routes() {
+export default function Routes() {
   return (
     <BrowserRouter>
       <Switch>
@@ -30,5 +30,3 @@ function Routes() {
     </BrowserRouter>
   );
 }
-
-export default Routes;

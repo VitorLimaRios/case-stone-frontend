@@ -2,9 +2,9 @@ import React from 'react';
 import { Pagination } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 
-const PaginationOrder = ({
+export default function PaginationOrder({
   currentPage, postsPerPage, totalPosts, paginate,
-}) => {
+}) {
   const pageNumbers = [];
 
   for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i += 1) {
@@ -24,7 +24,7 @@ const PaginationOrder = ({
       ))}
     </Pagination>
   );
-};
+}
 
 PaginationOrder.propTypes = {
   currentPage: PropTypes.number.isRequired,
@@ -32,5 +32,3 @@ PaginationOrder.propTypes = {
   totalPosts: PropTypes.number.isRequired,
   paginate: PropTypes.func.isRequired,
 };
-
-export default PaginationOrder;

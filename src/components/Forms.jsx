@@ -3,7 +3,7 @@ import { Form } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import { GlobalContext } from '../contexts/GlobalContext';
 
-function Forms({ username, useremail, userpassword }) {
+export default function Forms({ username, useremail, userpassword }) {
   const {
     functions: {
       setName,
@@ -59,5 +59,3 @@ Forms.propTypes = {
   useremail: PropTypes.string.isRequired,
   userpassword: PropTypes.string.isRequired,
 };
-
-export default Forms;

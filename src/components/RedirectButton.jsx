@@ -3,7 +3,7 @@ import { Button } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-function RedirectButton({ text, path }) {
+export default function RedirectButton({ text, path }) {
   const history = useHistory();
 
   return (
@@ -22,5 +22,3 @@ RedirectButton.propTypes = {
   text: PropTypes.string.isRequired,
   path: PropTypes.string.isRequired,
 };
-
-export default RedirectButton;

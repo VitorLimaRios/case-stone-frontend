@@ -1,7 +1,7 @@
 import React from 'react';
 import { Header } from '../components';
 
-function Characters() {
+export default function Characters() {
   return (
     <div>
       <Header />
@@ -9,5 +9,3 @@ function Characters() {
     </div>
   );
 }
-
-export default Characters;
