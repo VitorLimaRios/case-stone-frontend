@@ -5,10 +5,11 @@ import { Forms, SubmitButton, RedirectButton } from '../components';
 function Login() {
   return (
     <Container>
-      <Row
-        className="mt-5 justify-content-center"
-      >
-        <Col className="col" md={{ span: 6 }}>
+      <Row className="mt-5 justify-content-center">
+        <Col
+          className="bg-secondary bg-opacity-50 p-3 border border-success border-2 rounded text-white"
+          md={{ span: 6 }}
+        >
           <Forms username={false} useremail userpassword />
           <div className="d-grid gap-2">
             <SubmitButton text="Login" API_URL path="/characters" />
