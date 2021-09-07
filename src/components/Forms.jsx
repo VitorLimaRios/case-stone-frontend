@@ -17,7 +17,7 @@ function Forms({ username, useremail, userpassword }) {
       <Form.Label>Name</Form.Label>
       <Form.Control
         type="name"
-        placeholder="Enter a name"
+        placeholder="Username"
         onChange={({ target }) => setName(target.value)}
       />
     </Form.Group>
