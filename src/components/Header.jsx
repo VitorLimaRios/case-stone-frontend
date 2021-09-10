@@ -9,7 +9,7 @@ import { useHistory } from 'react-router-dom';
 export default function Header() {
   const history = useHistory();
   const obj = localStorage.getItem('user');
-  const name = (obj) ? JSON.parse(obj).name : 'NO NAME';
+  const username = (obj) ? JSON.parse(obj).username : 'NO NAME';
 
   const logout = () => {
     localStorage.clear();
@@ -34,10 +34,10 @@ export default function Header() {
             Characters
           </Nav.Link>
           <Nav.Link
-            onClick={() => history.push('/user-details')}
+            onClick={() => history.push('/user/details')}
             className="bg-success bg-opacity-90 m-2"
           >
-            { name }
+            { username }
           </Nav.Link>
           <Nav.Link
             onClick={() => logout()}

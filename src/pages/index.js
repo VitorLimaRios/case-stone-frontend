@@ -5,3 +5,5 @@ export { default as CharacterDetails } from './CharacterDetails';
 export { default as Comics } from './Comics';
 export { default as ComicDetails } from './ComicDetails';
 export { default as UserDetails } from './UserDetails';
+export { default as FavoriteCharacters } from './FavoriteCharacters';
+export { default as FavoriteComics } from './FavoriteComics';

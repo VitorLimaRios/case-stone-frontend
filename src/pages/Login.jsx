@@ -1,6 +1,7 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Forms, SubmitButton, RedirectButton } from '../components';
+import { LOGIN_URL } from '../constants/BackendApi';
 
 export default function Login() {
   return (
@@ -12,7 +13,7 @@ export default function Login() {
         >
           <Forms username={false} useremail userpassword />
           <div className="d-grid gap-2">
-            <SubmitButton text="Login" API_URL path="/characters" />
+            <SubmitButton text="Login" API_URL={LOGIN_URL} methodHTTP="post" />
             <RedirectButton text="Register" path="/register" />
           </div>
         </Col>

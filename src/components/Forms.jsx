@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Form } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import { GlobalContext } from '../contexts/GlobalContext';
@@ -11,6 +11,12 @@ export default function Forms({ username, useremail, userpassword }) {
       setPassword,
     },
   } = useContext(GlobalContext);
+
+  useEffect(() => {
+    setName('');
+    setEmail('');
+    setPassword('');
+  }, []);
 
   const nameInput = () => (
     <Form.Group className="mb-3" controlId="registerBasicName">
@@ -55,7 +61,7 @@ export default function Forms({ username, useremail, userpassword }) {
 }
 
 Forms.propTypes = {
-  username: PropTypes.string.isRequired,
-  useremail: PropTypes.string.isRequired,
-  userpassword: PropTypes.string.isRequired,
+  username: PropTypes.bool.isRequired,
+  useremail: PropTypes.bool.isRequired,
+  userpassword: PropTypes.bool.isRequired,
 };

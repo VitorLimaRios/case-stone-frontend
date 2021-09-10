@@ -1,10 +1,10 @@
 import Joi from 'joi';
 
-const MIN_NAME = 12;
+const MIN_NAME = 2;
 const MIN_PASSWORD = 6;
 
 export default Joi.object({
-  name: Joi.string().min(MIN_NAME),
+  username: Joi.string().min(MIN_NAME),
   email: Joi.string().email({
     minDomainSegments: 2,
     tlds: { allow: ['com', 'net', 'br'] },

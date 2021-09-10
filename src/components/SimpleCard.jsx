@@ -13,17 +13,14 @@ export default function SimpleCard(props) {
 
   const history = useHistory();
 
-  const cardStyle = {
-    width: '15rem',
-  };
-
   return (
     <Card
-      style={cardStyle}
+      style={{ width: '15rem' }}
       className="m-2"
     >
       <Card.Img
         variant="top"
+        style={{ height: '20rem' }}
         src={`${path}/portrait_xlarge.${extension}`}
       />
       <Card.Body>
@@ -44,9 +41,9 @@ export default function SimpleCard(props) {
 SimpleCard.propTypes = {
   type: PropTypes.string.isRequired,
   data: PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string,
+    title: PropTypes.string,
     thumbnail: PropTypes.shape({
       path: PropTypes.string.isRequired,
       extension: PropTypes.string.isRequired,

@@ -10,6 +10,8 @@ import {
   Comics,
   ComicDetails,
   UserDetails,
+  FavoriteCharacters,
+  FavoriteComics,
 } from '../pages';
 
 export default function Routes() {
@@ -25,7 +27,9 @@ export default function Routes() {
         <Route exact path="/characters/:id" component={CharacterDetails} />
         <Route exact path="/comics" component={Comics} />
         <Route exact path="/comics/:id" component={ComicDetails} />
-        <Route exact path="/user-details" component={UserDetails} />
+        <Route exact path="/user/details" component={UserDetails} />
+        <Route exact path="/user/comics" component={FavoriteComics} />
+        <Route exact path="/user/characters" component={FavoriteCharacters} />
       </Switch>
     </BrowserRouter>
   );
